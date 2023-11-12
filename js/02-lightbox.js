@@ -20,19 +20,11 @@ function galleryMarkup(items) {
 };
 gallery.insertAdjacentHTML('beforeend', galleryMarkup(galleryItems));
 
-gallery.addEventListener('click', onGalleryClick);
-
-function onGalleryClick(event) {
-    event.preventDefault();
-    if (event.currentTarget === event.target) {
-        return
-    }
-
-    const lightbox = new SimpleLightbox('.gallery a', {
-        captionsData: "alt",
-        captionDelay: 250,
-    });
+const lightbox = new SimpleLightbox('.gallery a', {
+    captionsData: "alt",
+    captionDelay: 250,
+});
 
 
 
-};
+
